@@ -2,6 +2,7 @@ import "./App.css"
 import img from "./books.webp";
 import b1 from "./islamic.jpg";
 import b2 from "./arabic.jpg";
+import { ProductItem } from "./Components/ProductItem";
 function App() {
   const products = [
     {
@@ -17,15 +18,7 @@ function App() {
   ];
   const productsList = products.map((product, index)=> {
     return(
-      <div key={index}>
-        <div>
-      <div>
-        <img className="Imgs" src={product.img}></img>
-        <h3>{product.name}</h3>
-        <p>{product.price}</p>
-      </div>
-      </div>
-      </div>
+      <ProductItem />
     )}
   )
   return (
