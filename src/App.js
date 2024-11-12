@@ -1,24 +1,12 @@
 import "./App.css"
 import img from "./books.webp";
-import b1 from "./islamic.jpg";
-import b2 from "./arabic.jpg";
 import { ProductItem } from "./Components/ProductItem";
+import products from "./data/products";
 function App() {
-  const products = [
-    {
-      name: "islamic",
-      price: "17 KD",
-      img: b1,
-    },
-    {
-      name: "learn Arabic",
-      price: "7 KD",
-      img: b2,
-    }
-  ];
-  const productsList = products.map((product, index)=> {
+  
+  const productList = products.map((product, index)=> {
     return(
-      <ProductItem />
+      <ProductItem product={product}/>
     )}
   )
   return (
@@ -27,7 +15,7 @@ function App() {
       <p>Where you forget the world</p>
       <img className="Img" src={img}></img>
       <div className="Products">
-      {productsList}
+      {productList}
       </div>
       
     </div>

@@ -1,11 +1,11 @@
 import React from 'react'
-import img from "../islamic.jpg";
-export const ProductItem = () => {
+export const ProductItem = (props) => {
+    
   return (  
       <div>
-        <img className="Imgs" src={img}></img>
-        <h3>Islamic</h3>
-        <p>18 KD</p>
+        <img className="Imgs" src={props.product.img}></img>
+        <h3>{props.product.name}</h3>
+        <p>{props.product.price}</p>
       </div>
 
   );
